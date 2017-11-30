@@ -1,3 +1,38 @@
+/* =============== fonts settings =============== */
+@import url('https://fonts.googleapis.com/css?family=Atomic+Age|Berkshire+Swash|Macondo+Swash+Caps|Nunito+Sans');
+
+h1 {
+    font-size: 3.5em;
+    font-family: 'Macondo Swash Caps', cursive;
+    width: 30%;
+    margin-left: 35%;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Berkshire Swash', cursive;
+    width: 20%;
+    margin-left: 40%;
+}
+
+h1,
+h2 {
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 1%;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-family: 'Atomic Age', cursive;
+}
+
+p {font-family: 'Nunito Sans', sans-serif;}
+
+p:hover {font-size: 1.2em;}
+
 /* =============== general settings =============== */
 body {
     margin: 0;
@@ -5,48 +40,31 @@ body {
     text-align: center;
 }
 
-h1,
-h2 {
-    font-size: 3em;
-    font-family: 'Franklin Gothic Medium', sans-serif;
-}
-
 main {
     display: grid;
-    margin: 0.5%;
+    padding: 0.5%;
 }
 
-section {
-    margin-bottom: 3%;
-}
+section {margin-bottom: 3%;}
 
 .grid-item {
     list-style: none;
     border-radius: 5%;
     width: 22%;
-    height: 450px;
+    height: 500px;
     margin: 0.5%;
     padding: 0.5%;
     overflow: hidden;
 }
 
-img {
-    width: 100%;
-}
+img {width: 80%;}
 
-li {
-    opacity: 0.9;
-}
+li {opacity: 0.9;} 
 
-li:hover {
-    opacity: 1;
-    border: 1px solid black;
-}
+li:hover {opacity: 1;}
 
 /* =============== grid-floats =============== */
-#grid-floats .grid-item {
-    float: left;
-}
+#grid-floats .grid-item {float: left;}
 
 /* =============== grid-flex =============== */
 #grid-flex {
@@ -60,56 +78,67 @@ li:hover {
 }
 
 /* =============== first-items =============== */
-.grid-item:nth-child(1) {
-    width: 46%;    
-}
+.grid-item:nth-child(1) {width: 46%;}
 
-.grid-item:nth-child(1) img {
-    width: 60%;
-}
+.grid-item:nth-child(1) img {width: 60%;}
 
 /* =============== tablet settings =============== */
-@media only screen and (min-width: 480px) and (max-width:960px) {
-    .grid-item:nth-child(-n+2) {
-        width: 45%;
-    }
+@media only screen and 
+(min-width: 480px) and (max-width:960px) {
 
-    .grid-item:nth-child(-n+2) img {
-        width: 100%;
-    }
+    .grid-item:nth-child(-n+2) {width: 45%;}
 
     .grid-item {
         width: 29%;
+        height: 350px;
         margin: 1%;
     }
+
+    img {width: 50%;}
+
+    h1{font-size: 2.5em;}
+    
+    h2 {font-size: 2em;}
+
+    h3 {font-size: 1em;}
+
+    p {font-size: 0.8em;}
+
+    p:hover {font-size: 0.9em;}
 }
 
 /* =============== phone settings =============== */
-@media only screen and (max-width: 479px) {
-    .grid-item:nth-child(1) {
-        width: 96%;
-    }
+@media only screen and 
+(max-width: 479px) {
 
-    .grid-item:nth-child(1) img {
-        width: 30%;
-    }
+    .grid-item:nth-child(1) {width: 96%;}
+
+    .grid-item:nth-child(1) img {width: 30%;}
 
     .grid-item {
         width: 46%;
         height: 250px;
-        margin: 5px;
+        margin: 1%;
+        margin-bottom: 10px;
     }
 
-    .grid-item img {
-        width: 50%;
-    }
+    .grid-item img {width: 50%;}
 
-    .grid-item p {
+    h1{font-size: 2em}
+
+    h2 {font-size: 1.5em;}
+
+    h3 {font-size: 1em;}
+
+    p {
+        font-size: 0.8em;
         width: 100%;
         height: 100px;
         overflow: scroll;
         overflow-x: hidden;
     }
+
+    p:hover {font-size: 0.8em;}
 }
 
 /* =============== @keyframes =============== */
@@ -128,6 +157,6 @@ li:hover {
 }
 
 @keyframes box {
-    50% {box-shadow: 1px 5px 5px 4px #3b98f5;}
-    100% {box-shadow: 1px 4px 4px 3px #db36f5;}
+    50% {box-shadow: 1px 5px 5px 4px #02060a;}
+    100% {box-shadow: 1px 4px 4px 3px #6e6d6e;}
 }
